@@ -70,6 +70,11 @@ export const TabDescription = {
     description:
       'Security events related to your Amazon AWS services, collected directly via AWS API.'
   },
+  gcp: {
+    title: 'Google Cloud Platform',
+    description:
+      'Security events related to your Google Cloud Platform, collected directly via GCP API.'
+  },
   virustotal: {
     title: 'VirusTotal',
     description:

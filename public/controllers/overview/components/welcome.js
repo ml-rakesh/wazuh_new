@@ -121,7 +121,7 @@ export class WelcomeScreen extends Component {
               <EuiFlexGroup gutterSize="xs">
                 <EuiFlexItem />
                 <EuiFlexItem grow={false}>
-                  {this.buildPopover('popoverSecurity', ['aws'])}
+                  {this.buildPopover('popoverSecurity', ['aws', 'gcp'])}
                 </EuiFlexItem>
               </EuiFlexGroup>
               <EuiFlexGrid columns={2}>
