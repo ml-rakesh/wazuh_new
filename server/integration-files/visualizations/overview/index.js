@@ -11,6 +11,7 @@
  */
 import audit from './overview-audit';
 import aws from './overview-aws';
+import gcp from './overview-gcp';
 import fim from './overview-fim';
 import general from './overview-general';
 import oscap from './overview-oscap';
@@ -28,6 +29,7 @@ import docker from './overview-docker';
 export {
   audit,
   aws,
+  gcp,
   fim,
   general,
   oscap,

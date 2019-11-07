@@ -1,0 +1,21 @@
+<md-content flex layout="column" ng-if="octrl.tab === 'gcp' && octrl.tabView === 'panels'"
+    ng-class="{'no-opacity': resultState !== 'ready' || !rendered}" layout-align="start">
+    <div layout="row" class="height-250">
+        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[0]}">
+            <md-card-content class="wazuh-column">
+                <div layout="row" ng-dblclick="octrl.expand(0)">
+                    <span class="wz-headline-title">Top rules</span>
+                    <span flex></span>
+                    <span class="cursor-pointer" ng-click="octrl.expand(0)">
+                        <react-component name="EuiIcon" props="{type:'expand'}" />
+                    </span>
+                </div>
+                <md-divider class="wz-margin-top-10"></md-divider>
+                <kbn-vis id="Wazuh-App-Overview-GCP-Top-5-rules" vis-id="'Wazuh-App-Overview-GCP-Top-5-rules'">
+                </kbn-vis>
+            </md-card-content>
+        </md-card>
+
+    </div>
+
+</md-content>
