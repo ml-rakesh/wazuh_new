@@ -11,6 +11,7 @@
  */
 import audit from './agents-audit';
 import fim from './agents-fim';
+import gcp from './agents-gcp';
 import general from './agents-general';
 import oscap from './agents-oscap';
 import ciscat from './agents-ciscat';
@@ -27,6 +28,7 @@ import docker from './agents-docker';
 export {
   audit,
   fim,
+  gcp,
   general,
   oscap,
   ciscat,

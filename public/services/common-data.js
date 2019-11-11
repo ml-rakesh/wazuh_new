@@ -50,7 +50,7 @@ export class CommonData {
     };
 
     this.agentTabs = {
-      hostMonitoringTabs: ['general', 'fim', 'syscollector'],
+      hostMonitoringTabs: ['general', 'fim', 'syscollector', 'gcp'],
       systemAuditTabs: ['pm', 'audit', 'oscap', 'ciscat', 'sca'],
       securityTabs: ['vuls', 'virustotal', 'osquery', 'docker'],
       complianceTabs: ['pci', 'gdpr', 'hipaa', 'nist']

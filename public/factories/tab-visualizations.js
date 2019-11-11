@@ -19,6 +19,7 @@ export class TabVisualizations {
       welcome: 0,
       general: 7,
       fim: 7,
+      gcp: 1,
       pm: 4,
       vuls: 10,
       oscap: 13,
