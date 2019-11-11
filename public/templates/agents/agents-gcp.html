@@ -1,14 +1,113 @@
 <md-content flex layout="column" ng-if="tab === 'gcp' && tabView === 'panels'"
     ng-class="{'no-opacity': resultState !== 'ready' || !rendered}" layout-align="start">
-
     <!-- View: Panels -->
-    <div layout="row" class="height-570">
-        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[1]}">
+    <div layout="row" class="height-550">
+        <div flex="60" layout="column">
+            <div flex layout="row" class="height-250">
+                <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[1]}">
+                    <md-card-content class="wazuh-column">
+                        <div layout="row" ng-dblclick="octrl.expand(1)">
+                            <span class="wz-headline-title">Events types and subtypes</span>
+                            <span flex></span>
+                            <span class="cursor-pointer" ng-click="octrl.expand(1)">
+                                <react-component name="EuiIcon" props="{type:'expand'}" />
+                            </span>
+                        </div>
+                        <md-divider class="wz-margin-top-10"></md-divider>
+                        <kbn-vis id="Wazuh-App-Agents-GCP-Event-Type-And-Subtype"
+                            vis-id="'Wazuh-App-Agents-GCP-Event-Type-And-Subtype'">
+                        </kbn-vis>
+                    </md-card-content>
+                </md-card>
+                <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[2]}">
+                    <md-card-content class="wazuh-column">
+                        <div layout="row" ng-dblclick="octrl.expand(2)">
+                            <span class="wz-headline-title">Severities</span>
+                            <span flex></span>
+                            <span class="cursor-pointer" ng-click="octrl.expand(2)">
+                                <react-component name="EuiIcon" props="{type:'expand'}" />
+                            </span>
+                        </div>
+                        <md-divider class="wz-margin-top-10"></md-divider>
+                        <kbn-vis id="Wazuh-App-Agents-GCP-Tag-Severities"
+                            vis-id="'Wazuh-App-Agents-GCP-Tag-Severities'">
+                        </kbn-vis>
+                    </md-card-content>
+                </md-card>
+            </div>
+            <div flex layout="row" class="height-250">
+                <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[3]}">
+                    <md-card-content class="wazuh-column">
+                        <div layout="row" ng-dblclick="octrl.expand(3)">
+                            <span class="wz-headline-title">Top 5 Users agents</span>
+                            <span flex></span>
+                            <span class="cursor-pointer" ng-click="octrl.expand(3)">
+                                <react-component name="EuiIcon" props="{type:'expand'}" />
+                            </span>
+                        </div>
+                        <md-divider class="wz-margin-top-10"></md-divider>
+                        <kbn-vis id="Wazuh-App-Agents-GCP-Top-5-user-agents"
+                            vis-id="'Wazuh-App-Agents-GCP-Top-5-user-agents'">
+                        </kbn-vis>
+                    </md-card-content>
+                </md-card>
+                <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[4]}">
+                    <md-card-content class="wazuh-column">
+                        <div layout="row" ng-dblclick="octrl.expand(4)">
+                            <span class="wz-headline-title">Top 5 Resources types</span>
+                            <span flex></span>
+                            <span class="cursor-pointer" ng-click="octrl.expand(4)">
+                                <react-component name="EuiIcon" props="{type:'expand'}" />
+                            </span>
+                        </div>
+                        <md-divider class="wz-margin-top-10"></md-divider>
+                        <kbn-vis id="Wazuh-App-Agents-GCP-Top-5-resource-type"
+                            vis-id="'Wazuh-App-Agents-GCP-Top-5-resource-type'">
+                        </kbn-vis>
+                    </md-card-content>
+                </md-card>
+            </div>
+        </div>
+        <div flex layout="column">
+            <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[5]}">
+                <md-card-content class="wazuh-column">
+                    <div layout="row" ng-dblclick="octrl.expand(5)">
+                        <span class="wz-headline-title">Auth Answer</span>
+                        <span flex></span>
+                        <span class="cursor-pointer" ng-click="octrl.expand(5)">
+                            <react-component name="EuiIcon" props="{type:'expand'}" />
+                        </span>
+                    </div>
+                    <md-divider class="wz-margin-top-10"></md-divider>
+                    <kbn-vis id="Wazuh-App-Agents-GCP-authAnswer-Bar" vis-id="'Wazuh-App-Agents-GCP-authAnswer-Bar'">
+                    </kbn-vis>
+                </md-card-content>
+            </md-card>
+        </div>
+    </div>
+    <div layout="row" class="height-400">
+        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[6]}">
             <md-card-content class="wazuh-column">
-                <div layout="row" ng-dblclick="octrl.expand(1)">
+                <div layout="row" ng-dblclick="octrl.expand(6)">
+                    <span class="wz-headline-title">Events over time</span>
+                    <span flex></span>
+                    <span class="cursor-pointer" ng-click="octrl.expand(6)">
+                        <react-component name="EuiIcon" props="{type:'expand'}" />
+                    </span>
+                </div>
+                <md-divider class="wz-margin-top-10"></md-divider>
+                <kbn-vis id="Wazuh-App-Agents-GCP-Events-Over-Time" vis-id="'Wazuh-App-Agents-GCP-Events-Over-Time'">
+                </kbn-vis>
+            </md-card-content>
+        </md-card>
+    </div>
+    <div layout="row" class="height-570">
+        <md-card flex class="wz-md-card" ng-class="{'fullscreen': octrl.expandArray[7]}">
+            <md-card-content class="wazuh-column">
+                <div layout="row" ng-dblclick="octrl.expand(7)">
                     <span class="wz-headline-title">Top rules</span>
                     <span flex></span>
-                    <span class="cursor-pointer" ng-click="octrl.expand(1)">
+                    <span class="cursor-pointer" ng-click="octrl.expand(7)">
                         <react-component name="EuiIcon" props="{type:'expand'}" />
                     </span>
                 </div>
@@ -18,5 +117,4 @@
             </md-card-content>
         </md-card>
     </div>
-
 </md-content>
