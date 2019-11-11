@@ -117,12 +117,19 @@ export class WelcomeScreen extends Component {
         <EuiFlexGroup>
           <EuiFlexItem>
             <EuiPanel betaBadgeLabel="Security Information Management">
-              <EuiSpacer size="l" />
+              <EuiFlexGroup gutterSize="xs">
+                <EuiFlexItem />
+                <EuiFlexItem grow={false}>
+                  {this.buildPopover('popoverAuditing', ['gcp'])}
+                </EuiFlexItem>
+              </EuiFlexGroup>
               <EuiFlexGrid columns={2}>
                 {this.buildTabCard('general', 'dashboardApp')}
                 {this.buildTabCard('fim', 'loggingApp')}
                 {this.buildTabCard('configuration', 'gear')}
                 {this.buildTabCard('syscollector', 'notebookApp')}
+                {this.props.extensions.gcp &&
+                  this.buildTabCard('gcp', 'logoGCPMono')}
               </EuiFlexGrid>
             </EuiPanel>
           </EuiFlexItem>
