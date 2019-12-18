@@ -37,6 +37,11 @@ class WzMenu {
     $scope.showSelector = appState.getPatternSelector();
     $scope.root = $rootScope;
     $scope.settedMenuHeight = false;
+    $scope.isShowingNavPopover = false;
+
+    $scope.showNavigationPopover = () => {
+      $scope.isShowingNavPopover = !$scope.isShowingNavPopover;
+    }
 
     $scope.goToClick = path => {
       $window.location.href = path;

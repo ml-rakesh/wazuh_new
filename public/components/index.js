@@ -10,3 +10,34 @@
  * Find more information about this on the LICENSE file.
  */
 import './eui-loader';
+
+import { uiModules } from 'ui/modules';
+import { NavigationPopover } from './common/navigation-popover';
+
+const app = uiModules.get('app/wazuh', []);
+
+app
+  .value('NavigationPopover', NavigationPopover)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
